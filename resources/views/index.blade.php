@@ -12,13 +12,13 @@
     <title>Admin</title>
 
     <!-- Custom fonts for this template-->
-    <link href="{{ asset('sbadmin') }}vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="{{ asset('sbadmin/vendor/fontawesome-free/css/all.min.css') }}vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="{{ asset('sbadmin') }}css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="{{ asset('sbadmin/css/sb-admin-2.min.css') }}" rel="stylesheet">
 
 </head>
 
@@ -31,7 +31,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ asset('sbadmin') }}index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ asset('sbadmin/index.html') }}">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
@@ -43,7 +43,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="{{ asset('sbadmin') }}index.html">
+                <a class="nav-link" href="{{ asset('sbadmin/index.html') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -66,8 +66,8 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Components:</h6>
-                        <a class="collapse-item" href="{{ asset('sbadmin') }}buttons.html">Buttons</a>
-                        <a class="collapse-item" href="{{ asset('sbadmin') }}cards.html">Cards</a>
+                        <a class="collapse-item" href="{{ asset('sbadmin/buttons.html') }}">Buttons</a>
+                        <a class="collapse-item" href="{{ asset('sbadmin/cards.html') }}">Cards</a>
                     </div>
                 </div>
             </li>
@@ -83,10 +83,10 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href="{{ asset('sbadmin') }}utilities-color.html">Colors</a>
-                        <a class="collapse-item" href="{{ asset('sbadmin') }}utilities-border.html">Borders</a>
-                        <a class="collapse-item" href="{{ asset('sbadmin') }}utilities-animation.html">Animations</a>
-                        <a class="collapse-item" href="{{ asset('sbadmin') }}utilities-other.html">Other</a>
+                        <a class="collapse-item" href="{{ asset('sbadmin/utilities-color.html') }}">Colors</a>
+                        <a class="collapse-item" href="{{ asset('sbadmin/utilities-border.') }}">Borders</a>
+                        <a class="collapse-item" href="{{ asset('sbadmin/utilities-animation.') }}">Animations</a>
+                        <a class="collapse-item" href="{{ asset('sbadmin/utilities-other.') }}">Other</a>
                     </div>
                 </div>
             </li>
@@ -110,13 +110,13 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="{{ asset('sbadmin') }}login.html">Login</a>
-                        <a class="collapse-item" href="{{ asset('sbadmin') }}register.html">Register</a>
-                        <a class="collapse-item" href="{{ asset('sbadmin') }}forgot-password.html">Forgot Password</a>
+                        <a class="collapse-item" href="{{ asset('sbadmin/login.html')}}">Login</a>
+                        <a class="collapse-item" href="{{ asset('sbadmin/register.html')}}">Register</a>
+                        <a class="collapse-item" href="{{ asset('sbadmin/forgot-password.html')}}">Forgot Password</a>
                         <div class="collapse-divider"></div>
                         <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="{{ asset('sbadmin') }}404.html">404 Page</a>
-                        <a class="collapse-item active" href="{{ asset('sbadmin') }}blank.html">Blank Page</a>
+                        <a class="collapse-item" href="{{ asset('sbadmin/404.html')}}">404 Page</a>
+                        <a class="collapse-item active" href="{{ asset('sbadmin/blank.html')}}">Blank Page</a>
                     </div>
                 </div>
             </li>
@@ -280,7 +280,7 @@
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_2.svg"
+                                        <img class="rounded-circle" src="{{ asset('sbadmin/img/undraw_profile_2.svg') }}"
                                             alt="...">
                                         <div class="status-indicator"></div>
                                     </div>
@@ -304,7 +304,7 @@
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
+                                        <img class="rounded-circle" src="ttps://source.unsplash.com/Mv9hjnEUHR4/60x60"
                                             alt="...">
                                         <div class="status-indicator bg-success"></div>
                                     </div>
@@ -403,21 +403,21 @@
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="{{ asset('sbadmin') }}login.html">Logout</a>
+                    <a class="btn btn-primary" href="{{ asset('sbadmin/login.html') }}">Logout</a>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="{{ asset('sbadmin') }}vendor/jquery/jquery.min.js"></script>
-    <script src="{{ asset('sbadmin') }}vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('sbadmin/vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('sbadmin/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src={{ asset('sbadmin') }}{{ asset('sbadmin') }}vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="{{ asset('sbadmin/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="{{ asset('sbadmin') }}js/sb-admin-2.min.js"></script>
+    <script src="{{ asset('sbadmin/js/sb-admin-2.min.js') }}"></script>
 
 </body>
 
