@@ -14,14 +14,12 @@ return new class extends Migration
         Schema::create('jadwal_prakteks', function (Blueprint $table) {
             $table->id(); // Auto-incrementing primary key
             $table->unsignedBigInteger('dokter_id');
-            $table->string('hari', 100); 
-            $table->time('jam_mulai'); 
-            $table->time('jam_selesai'); 
+            $table->string('hari', 100);
+            $table->time('jam_mulai');
+            $table->time('jam_selesai');
             $table->integer('kuota_harian');
-            
-              $table->dropForeign(['dokter_id']);
              $table->foreign('dokter_id')->references('id')->on('users')->onDelete('cascade');
-            
+
         });
     }
 
@@ -30,9 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-         Schema::table('jadwal_prakteks', function (Blueprint $table) {
-            $table->dropForeign(['dokter_id']); // Hapus constraint cascade
-            $table->foreign('dokter_id')->references('id')->on('users'); // Buat kembali tanpa cascade
-        });
+        Schema::dropIfExists('jadwal_prakteks');
     }
 };
