@@ -18,8 +18,9 @@ return new class extends Migration
             $table->time('jam_mulai'); 
             $table->time('jam_selesai'); 
             $table->integer('kuota_harian');
-
-            //  $table->foreign('dokter_id')->references('id')->on('users')->onDelete('cascade');
+            
+              $table->dropForeign(['dokter_id']);
+             $table->foreign('dokter_id')->references('id')->on('users')->onDelete('cascade');
             
         });
     }
@@ -29,6 +30,9 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('dokters');
+         Schema::table('jadwal_prakteks', function (Blueprint $table) {
+            $table->dropForeign(['dokter_id']); // Hapus constraint cascade
+            $table->foreign('dokter_id')->references('id')->on('users'); // Buat kembali tanpa cascade
+        });
     }
 };

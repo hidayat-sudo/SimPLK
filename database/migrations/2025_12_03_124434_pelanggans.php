@@ -16,7 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             $table->text('alamat', 100); 
             $table->string('no_hp',15); 
-            
+             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 });
     }
 

@@ -12,18 +12,24 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('users', function (Blueprint $table) {
-              $table->id(); // Auto-incrementing primary key
-            $table->string('name', 100); 
+            $table->id(); // Auto-incrementing primary key
+            $table->string('name', 100);
             $table->string('email', 100)->unique(); // VARCHAR dengan panjang maksimum 100 dan unique
+            $table->timestamp('email_verified_at')->nullable();
             $table->string('password'); // VARCHAR untuk password
             $table->enum('role', ['admin', 'dokter', 'pelanggan'])->default('pelanggan'); // Enum untuk role
+            $table->rememberToken(); // Tambahkan ini jika menggunakan fitur remember me
             $table->timestamps(); // created_at dan updated_at
+            //  $table->foreign('user_id')->references('id')->on('users')->onDelete('set null');
         });
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {
-            $table->string('email')->primary();
+            $table->id();
+            $table->string('email');
             $table->string('token');
             $table->timestamp('created_at')->nullable();
+
+            $table->foreign('email')->references('email')->on('users')->onDelete('cascade');
         });
 
         Schema::create('sessions', function (Blueprint $table) {
@@ -33,6 +39,8 @@ return new class extends Migration
             $table->text('user_agent')->nullable();
             $table->longText('payload');
             $table->integer('last_activity')->index();
+
+           
         });
     }
 

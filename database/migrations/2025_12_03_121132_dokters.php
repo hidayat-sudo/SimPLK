@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('no_sip', 100); 
             $table->string('no_hp'); 
             
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
